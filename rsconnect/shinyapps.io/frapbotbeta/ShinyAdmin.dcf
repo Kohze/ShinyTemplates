@@ -1,0 +1,9 @@
+name: ShinyAdmin
+account: frapbotbeta
+server: shinyapps.io
+appId: 152607
+bundleId: 688461
+url: https://frapbotbeta.shinyapps.io/ShinyAdmin/
+when: 1485197124.69565
+asMultiple: FALSE
+asStatic: FALSE

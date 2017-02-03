@@ -1,0 +1,72 @@
+<script>
+    var requireJS = [];
+
+    loadJS(requireJS, "js/views/main.js");
+</script>
+<script src="//d3js.org/d3.v3.min.js"></script>
+
+<div class="animated fadeIn">
+  <div class="row">
+    <div class="row" style="margin-bottom: 10px">
+        <div class="col s4">
+            <div class="form-group shiny-input-container">
+                <input class="js-range-slider" id="controller" data-min="1" data-max="20" data-from="15" data-step="1" data-grid="true" data-grid-num="9.5" data-grid-snap="false" data-keyboard="true" data-keyboard-step="5.26315789473684" data-drag-interval="true" data-data-type="number"
+                    data-prettify-separator="," />
+            </div>
+        </div>
+    </div>
+            <div class="col s4">
+              <div class="input-field">
+                <div>
+                  <select id="ycol">
+                    <option value="Sepal.Length">Sepal.Length</option>
+                    <option value="Sepal.Width" selected>Sepal.Width</option>
+                    <option value="Petal.Length">Petal.Length</option>
+                    <option value="Petal.Width">Petal.Width</option>
+                    <option value="Species">Species</option></select>
+                    <script type="application/json" data-for="ycol" data-nonempty="">{}</script>
+                  </div>
+                </div>
+              </div>
+
+            <div class="col s4">
+              <div class="input-field">
+                <div>
+                  <select id="ycol">
+                    <option value="Sepal.Length">Sepal.Length</option>
+                    <option value="Sepal.Width" selected>Sepal.Width</option>
+                    <option value="Petal.Length">Petal.Length</option>
+                    <option value="Petal.Width">Petal.Width</option>
+                    <option value="Species">Species</option></select>
+                    <script type="application/json" data-for="ycol" data-nonempty="">{}</script>
+                  </div>
+                </div>
+              </div>
+  </div>
+    <div class="">
+        <!--/.row-->
+        <div style="height:300px;margin-top:40px; display: block;">
+            <div id="plot4" class="shiny-plot-output" style=" height: 350px;"> </div>
+        </div>
+    </div>
+    <!-- plots -->
+    <div class="row">
+        <div class="col">
+            <div id="plot2" class="shiny-plot-output" style=" height: 350px; margin-top: 50px;"> </div>
+        </div>
+        <div class="col">
+            <div id="plot3" class="shiny-plot-output" style=" height: 270px; margin-top: 50px; padding-top: 50px;"> </div>
+        </div>
+    </div>
+    <script>
+        Shiny.addCustomMessageHandler("testmessage",
+            function(message) {
+                msg1 = parseInt(JSON.stringify(message.controller));
+                console.log(msg1);
+            }
+        );
+    </script>
+
+</div>
+<!--/.card-->
+</div>
